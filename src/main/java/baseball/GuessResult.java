@@ -44,7 +44,12 @@ public class GuessResult {
 
         int ballCount=getBallResult(inputList);
         int strikeCount=getStrikeResult(inputList);
-        PrintUtils.printResult(ballCount,strikeCount);
+
+        try {
+            PrintUtils.printResult(ballCount, strikeCount);
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+        }
 
         if(strikeCount==3 && ballCount==0){
             return true;
