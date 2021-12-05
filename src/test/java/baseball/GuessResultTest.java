@@ -27,9 +27,7 @@ class GuessResultTest {
             inputList.add(new int[]{tempAnswer%10,i}); // ex) 713 -> (key, value) = { 7:2, 1:1, 3:0 }
             tempAnswer/=10;
         }
-
         Assertions.assertEquals(expectedOutput,guessResult.getBallResult(inputList)); // expected output
-
     }
 
     @Test

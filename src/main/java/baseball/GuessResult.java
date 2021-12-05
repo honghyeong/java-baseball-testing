@@ -25,7 +25,10 @@ public class GuessResult {
         for(int i=0;i<answerList.size();i++){
             int value=answerList.get(i)[0];
             int index=answerList.get(i)[1];
-            result+=inputList.stream().filter(e->e[0]==value).filter(e->e[1]!=index).count();
+            result+=inputList.stream()
+                    .filter(e->e[0]==value)
+                    .filter(e->e[1]!=index)
+                    .count();
         }
         return result;
     }
